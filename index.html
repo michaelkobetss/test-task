@@ -44,7 +44,7 @@
       <br />
       <div class="w3-container w3-row">
         <div class="w3-col s8 w3-bar">
-          <span>Привіт, <strong>Mike</strong></span
+          <span class="nav-text hide">Привіт, <strong>Mike</strong></span
           ><br />
         </div>
       </div>
@@ -52,13 +52,16 @@
 
       <div class="w3-bar-block">
         <div class="w3-bar-item w3-button w3-padding">
-          <i class="fa fa-truck fa-fw"></i>&nbsp; link1
+          <i class="fa fa-truck fa-fw"></i>
+          <span class="nav-text hide">&nbsp; link1</span>
         </div>
         <div class="w3-bar-item w3-button w3-padding">
-          <i class="fa fa-tree fa-fw"></i>&nbsp; link2
+          <i class="fa fa-tree fa-fw"></i>
+          <span class="nav-text hide">&nbsp; link2</span>
         </div>
         <div class="w3-bar-item w3-button w3-padding">
-          <i class="fa fa-balance-scale fa-fw"></i>&nbsp; link3
+          <i class="fa fa-balance-scale fa-fw"></i
+          ><span class="nav-text hide">&nbsp; link3</span>
         </div>
       </div>
     </nav>
@@ -73,24 +76,42 @@
       <div class="w3-row-padding w3-margin-bottom">
         <div class="w3-container">
           <h5>Власники котиків</h5>
-          <input
-            class="w3-input"
-            type="text"
-            placeholder="Пошук"
-            oninput="searchTable()"
-          /><br />
+          <div class="w3-row w3-gap">
+            <div class="w3-col m6 w3-center w3-grey">
+              <input
+                id="name-input"
+                class="w3-input"
+                type="text"
+                placeholder="Пошук по імені"
+                oninput="searchTable('name-input', 0)"
+               
+              />
+            </div>
+            <div class="w3-col m6 w3-center">  <input
+              id="surname-input"
+              class="w3-input"
+              type="text"
+              placeholder="Пошук по прізвищу"
+              oninput="searchTable('surname-input', 1)"
+            /></div>
+          
+          </div>
+
+          <br />
 
           <table class="w3-table-all">
             <thead>
               <tr class="w3-blue">
                 <th data-type="string">
-                  Ім'я <i class="fa fa-sort fa-fw" onclick="sortTable(0)" />
+                  Ім'я
+                  <i class="fa fa-sort fa-fw" onclick="sortTable(0)"></i>
                 </th>
                 <th data-type="string">
-                  Прізвище <i class="fa fa-sort fa-fw" onclick="sortTable(1)" />
+                  Прізвище
+                  <i class="fa fa-sort fa-fw" onclick="sortTable(1)"></i>
                 </th>
                 <th data-type="number">
-                  Бали <i class="fa fa-sort fa-fw" onclick="sortTable(2)" />
+                  Бали <i class="fa fa-sort fa-fw" onclick="sortTable(2)"></i>
                 </th>
               </tr>
             </thead>
@@ -125,7 +146,6 @@
             Більше інформації &nbsp;<i class="fa fa-bug"></i>
           </button>
           <div id="catFact" class="w3-san-serif"></div>
-
         </div>
       </div>
     </div>
