@@ -1,0 +1,16 @@
+.w3-main {
+  margin-left: 300px !important;
+}
+
+@media only screen and (max-width: 992px) {
+  .w3-main {
+    margin-left: 50px !important;
+  }
+  .hide {
+    display: none;
+  }
+  .w3-collapse {
+    display: block !important;
+    max-width: 50px;
+  }
+}
